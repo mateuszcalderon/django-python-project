@@ -1,0 +1,112 @@
+a
+{
+    text-decoration: none;
+}
+
+html, body
+{
+    align-items: center;
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+footer
+{
+    background-color: #F5F5F5;
+    margin-top: auto;
+}
+
+.footer-container
+{
+    flex-grow: 1;
+    width: 100%;
+}
+
+.social-icons
+{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-icons a
+{
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    height: 50px;
+    padding: 1em;
+    width: 50px;
+}
+
+.social-icons a i
+{
+    color: #000000;
+    font-size: 20px;
+}
+
+.social-icons a:hover
+{
+    background-color: #000000;
+    transition: 0.5s;
+}
+
+.social-icons a:hover i
+{
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+
+.footer-bottom
+{
+    padding: 4px;
+    text-align: center;
+}
+
+.footer-bottom p
+{
+    color: #000000;
+}
+
+.designer
+{
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    opacity: 0.5;
+}
+
+.centered-content
+{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+}
+
+.centered-content a
+{
+    color: #000000;
+    display: block;
+    font-size: 16px;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.centered-content a:hover
+{
+    color: #0000FF;
+}

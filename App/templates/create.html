@@ -1,0 +1,168 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <form name="users-form" id="UsersForm" method="post" action="/store/" class="signup-form">
+            <h2 class="text-center mb-4">Sign Up</h2>
+
+            {% if msg %}
+                <div class="alert {{class}} mb-4">
+                    {{msg}}
+                </div>
+            {% endif %}
+
+            {% csrf_token %}
+
+            <div class="form-group mb-3">
+                <label for="UserName" class="form-label">User Name:</label>
+                <input class="form-control" type="text" name="user-name" id="UserName" placeholder="user name" required>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="FirstName" class="form-label">First Name:</label>
+                <input class="form-control" type="text" name="first-name" id="FirstName" placeholder="first name" required>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="Email" class="form-label">Email:</label>
+                <input class="form-control" type="email" name="email" id="Email" placeholder="email" required>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="Password" class="form-label">Password:</label>
+                <input class="form-control" type="password" name="password" id="Password" placeholder="password" required>
+            </div>
+
+            <div class="form-group mb-4">
+                <label for="PasswordConfirmation" class="form-label">Confirm your Password:</label>
+                <input class="form-control" type="password" name="password-confirmation" id="PasswordConfirmation" placeholder="password corfirmation" required>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-dark" type="submit">Sign Up</button>
+                <button class="btn btn-secondary" type="button" onclick="window.history.back();">Back</button>
+            </div>
+        </form>
+    </div>
+
+    <style>
+        body
+        {
+            align-items: center;
+            background: #F5F5F5;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: flex-start;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container
+        {
+            display: flex;
+            height: auto;
+            justify-content: flex-start;
+            margin-top: 0;
+        }
+
+        .signup-form
+        {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-height: 600px;
+            max-width: 400px;
+            overflow-y: auto;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .signup-form h2
+        {
+            color: #000000;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .form-group label
+        {
+            color: #000000;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .form-control
+        {
+            border: 1px solid #D3D3D3;
+            border-radius: 5px;
+            font-size: 16px;
+            padding: 8px;
+            transition: border-color 0.5s;
+        }
+
+        .form-control:focus
+        {
+            border-color: #007BFF;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .btn
+        {
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 12px;
+            transition: background-color 0.5s;
+            width: 48%;
+        }
+
+        .btn-dark
+        {
+            background-color: #343A40;
+            color: white;
+        }
+
+        .btn-dark:hover
+        {
+            background-color: #23272B;
+        }
+
+        .btn-secondary
+        {
+            background-color: #6C757D;
+            color: white;
+        }
+
+        .btn-secondary:hover
+        {
+            background-color: #5A6268;
+        }
+
+        .alert
+        {
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        .alert-success
+        {
+            background-color: #D4EDDA;
+            color: #155724;
+        }
+
+        .alert-danger
+        {
+            background-color: #F8D7DA;
+            color: #721C24;
+        }
+
+        .signup-form .form-control::placeholder
+        {
+            color: #D3D3D3;
+        }
+
+    </style>
+{% endblock %}

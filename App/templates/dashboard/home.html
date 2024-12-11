@@ -1,0 +1,26 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+    {% if request.user.is_authenticated %}
+        <h1>Restrict Area.</h1>
+
+        <a href="/logouts/">Log Out</a>
+
+        {% if perms.admin.add_logentry %}
+            <p>You can add logentry!</p>
+        {% endif %}
+
+        {% if perms.admin.delete_logentry %}
+            <p>You can delete logentry!</p>
+        {% endif %}
+
+        {% if perms.auth.view_user %}
+            <p>You can view users!</p>
+        {% endif %}
+
+    {% else %}
+        <h1>You don't have access to this area.</h1>
+    {% endif %}
+
+{% endblock %}
