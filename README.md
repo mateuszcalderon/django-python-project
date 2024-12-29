@@ -11,12 +11,25 @@
 To learn about Django and its role, I followed the tutorials from the YouTube channel **Webdesign em Foco**. You can check out his first Python tutorial video [here](https://www.youtube.com/watch?v=zcjBIt6rwTY)!
 
 ## Installation:
+### 1. Install Python
+If you don't have Python installed on your system, download it from the official website:
+- [Python Official Website](https://www.python.org/)
+
+You can check if Python is installed and verify its version by running ` python --version ` on your Command Prompt/Terminal.
+
+### 2. Create a Virtual Environment
+It's highly recommended to use a virtual environment to keep your project dependencies isolated and avoid conflicts with other Python projects.<br/>
+To create a virtual environment:
+  a. Navigate to the directory where you want to set up your Django project. You can use your Command Prompt/Terminal.
+  b. Then, run the following command to create your virtual environment:
+` python -m venv venv `
 
 ## Development Environment:
 This project was developed using the following tools and versions:
   - Django: 5.1.2
   - mysqlclient: 2.2.4
   - PyCharm: 2024.2.1 (Community Edition)
+  - Python: 3.12.6
   - WampServer: 3.3.5 
 
 ## Project Disclaimer:
