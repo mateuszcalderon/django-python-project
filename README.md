@@ -15,14 +15,14 @@ To learn about Django and its role, I followed the tutorials from the YouTube ch
 If you don't have Python installed on your system, download it from the official website:
 - [Python Official Website](https://www.python.org/)
 
-You can check if Python is installed and verify its version by running ` python --version ` on your Command Prompt.
+You can check if Python is installed correctly and verify its version by running ` python --version ` on your Command Prompt.
 
 ### 2. Create a Virtual Environment
 It's highly recommended to use a virtual environment to keep your project dependencies isolated and avoid conflicts with other Python projects.<br/>
 To create a virtual environment:
   1. Navigate to the directory where you want to set up your Django project. You can use your Command Prompt.
   2. Then, run the following command to create your virtual environment: ` python -m venv venv `
-  3. To activate the virtual environment, run the command: ` .\venv\Scripts\activate `
+  3. To activate the virtual environment, run the command: ` ...\venv\Scripts\activate `
 
 ### 3. Install Django
 With your virtual environment activated, install Django using pip: ` pip install django `
@@ -36,6 +36,15 @@ To use MySQL database and run this project locally, as I did, you have to downlo
 
 ### 6. Install IDE
 There are dozens of IDEs available for download and you can choose the one you are most comfortable with. My project was developed using PyCharm and you can download it clicking [here](https://www.jetbrains.com/pycharm/).
+
+### 7. Install mysqlclient
+mysqlclient allows Python programs to connect to MySQL and MariaDB databases and perform CRUD (Create, Read, Update, Delete) operations. You can install mysqlclient using pip: ` pip install mysqlclient `
+
+### 8. Database Migration
+The ` python manage.py migrate ` command applies database migrations in a Django project, ensuring the database schema is up-to-date with the defined models. It creates, modifies, or deletes tables and columns based on migration files, keeping the database structure synchronized with your code. Just run it on your Command Prompt and your database will already be configured.
+
+### 9. Run Server
+The ` python manage.py runserver ` command starts Django's built-in development server, allowing you to run your project locally. Run it on your Command Prompt and you finally will be able to develop your Django project.
 
 ## Development Environment:
 This project was developed using the following tools and versions:
